@@ -1,3 +1,4 @@
+mod fun;
 fn main() {
     let mut a=5;
     println!("{a}");
@@ -18,7 +19,7 @@ fn main() {
     let tup:(i32,u8)=(302,6);
     println!("{},{}",tup.0,tup.1);
     let (x, y) = tup;
-    println!("({})", x);
+    println!("{}", x);
     let b: [i32; 5] = [1, 2, 3, 4,9];
     println!("{}",b[4]);
     let mut firstStr=String::new();
@@ -37,4 +38,6 @@ fn main() {
 
     println!("Original String: {}", original_string);
     println!("Owned String: {}", owned_string);
+    fun::sum();
+
 }
