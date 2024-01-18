@@ -58,8 +58,8 @@ pub fn looping(){
     // }
     // println!("End count = {count}");
 
-    let arr=[2,3,4,5,6,7];
-    let mut len=0;
+    let arr: [i32; 6]=[2,3,4,5,6,7];
+    let mut len: usize=0;
     loop{
         println!("using loop loop 😂{}",arr[len]);
         len+=1;
@@ -70,7 +70,7 @@ pub fn looping(){
     for ele in arr{
         println!("looping for{}",ele);
     }
-    
+
     //another great loop here below
  
         for number in (1..7) { // it will iterates till 6 
