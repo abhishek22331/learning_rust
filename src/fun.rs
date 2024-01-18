@@ -20,6 +20,7 @@ pub fn sum() {
     } else if trimmed_input.chars().all(|ch| ch.is_alphabetic()) {
         // Check if all characters are alphabetic
         println!("You entered a string: {}", trimmed_input);
+        
     } else {
         // Try parsing the input as an i32
         match trimmed_input.parse::<i32>() {
