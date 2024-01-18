@@ -1,4 +1,5 @@
 mod fun;
+mod condition;
 fn main() {
     let mut a=5;
     println!("{a}");
@@ -39,5 +40,8 @@ fn main() {
     println!("Original String: {}", original_string);
     println!("Owned String: {}", owned_string);
     fun::sum();
-
+    condition::looping();
+   let ans= condition::con();
+   let ans2= condition::con2();
+   println!("{} {}",ans,ans2)
 }

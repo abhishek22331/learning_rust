@@ -3,8 +3,13 @@ use std::io;
 pub fn sum() {
     let x = 5;
     let y = 6;
-    println!("Sum from fun: {}", x + y);
+    println!("Sum from fun: {x} {}",y);
+    let yy = {
+        let x = 3;
+        x + 1
+    };
 
+    println!("The value of yyyyy is: {yy}");
     let mut user_input = String::new();
 
     println!("Please enter something:");
