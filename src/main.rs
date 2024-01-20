@@ -1,5 +1,6 @@
 mod fun;
 mod condition;
+mod own;
 fn main() {
     let mut a: i32=5;
     println!("{a}");
@@ -44,4 +45,5 @@ fn main() {
    let ans: bool= condition::con();
    let ans2: u32= condition::con2();
    println!("{} {}",ans,ans2)
+   own::ownership();
 }
