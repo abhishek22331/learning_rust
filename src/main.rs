@@ -2,6 +2,7 @@ mod fun;
 mod condition;
 mod own;
 mod learnStruct;
+mod learnEnum;
 fn main() {
     let mut a: i32=5;
     println!("{a}");
@@ -48,4 +49,5 @@ fn main() {
    println!("{} {}",ans,ans2);
    own::ownership();
    learnStruct::learnStruct();
+   learnEnum::learnEnum()
 }
