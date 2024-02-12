@@ -1,8 +1,16 @@
+use crate::test::vector;
+use crate::test::learnString;
+// use test::vector; // it will also work
+
 mod fun;
 mod condition;
 mod own;
 mod learnStruct;
 mod learnEnum;
+mod test {
+    pub mod vector;
+    pub mod learnString;
+}
 fn main() {
     let mut a: i32=5;
     println!("{a}");
@@ -49,5 +57,7 @@ fn main() {
    println!("{} {}",ans,ans2);
    own::ownership();
    learnStruct::learnStruct();
-   learnEnum::learnEnum()
+   learnEnum::learnEnum();
+   vector::learnVector();
+   learnString::learnString();
 }
