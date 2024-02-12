@@ -1,5 +1,6 @@
 use crate::test::vector;
 use crate::test::learnString;
+use crate::test::error;
 // use test::vector; // it will also work
 
 mod fun;
@@ -10,6 +11,7 @@ mod learnEnum;
 mod test {
     pub mod vector;
     pub mod learnString;
+    pub mod error;
 }
 fn main() {
     let mut a: i32=5;
@@ -60,4 +62,5 @@ fn main() {
    learnEnum::learnEnum();
    vector::learnVector();
    learnString::learnString();
+   error::all_error();
 }
