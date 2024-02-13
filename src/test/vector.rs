@@ -15,7 +15,7 @@ pub fn learnVector() {
         println!("this is vector2 {}", j);
     }
     // let mut v3: Vec<i32> = Vec::new(); // here we can add value in new vector
-    let mut v3 = vec![9, 4, 5, 6, 7]; //when we addition integer in vector
+    let mut v3 = vec![9, 4, 5, 6, 7]; //when we add integer in vector
 
     println!("Please enter an integer for the vector:");
     let mut user_input = String::new();
