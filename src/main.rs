@@ -1,16 +1,32 @@
+use crate::test::vector;
+use crate::test::learnString;
+use crate::test::error;
+// use test::vector; // it will also work
+
 mod fun;
+mod condition;
+mod own;
+mod learnStruct;
+mod learnEnum;
+mod test {
+    pub mod vector;
+    pub mod learnString;
+    pub mod error;
+}
 fn main() {
-    let mut a=5;
+    let mut a: i32=5;
     println!("{a}");
     a=9;
     println!("{a}");
     {
-        let a=18;
+        let a: i32=18;
         println!("aaaaaaaaaaaaa:{a}");
     }
     println!("{a}");
-    let str="a ";
-    let l=str.len();
+    // panic!("something wrong happend"); //when we use panic that means after panic code will not execute
+    // std::process::abort(); //when panic occurred then we can abort program and when we use abort then no unwinding occurred
+    let str: &str="a ";
+    let l: usize=str.len();
     println!("{}",str.len());
     let guess: u32 = "8".parse().expect("Not a number!");
     println!("{}",guess);
@@ -18,7 +34,7 @@ fn main() {
     println!("{z}");
     let tup:(i32,u8)=(302,6);
     println!("{},{}",tup.0,tup.1);
-    let (x, y) = tup;
+    let (x, _y) = tup;
     println!("{}", x);
     let b: [i32; 5] = [1, 2, 3, 4,9];
     println!("{}",b[4]);
@@ -28,8 +44,8 @@ fn main() {
     let mut my_string = String::from("Hello, World!");
     my_string.push_str(" amit");
     println!("{}",my_string);
-    let hello = "Hello ,";
-    let world = "World!";
+    let hello: &str = "Hello ,";
+    let world: &str = "World!";
     let hw=hello.to_owned()+world;
     println!("{},{}",hw,hello);
    
@@ -39,5 +55,14 @@ fn main() {
     println!("Original String: {}", original_string);
     println!("Owned String: {}", owned_string);
     fun::sum();
-
+    condition::looping();
+   let ans: bool= condition::con();
+   let ans2: u32= condition::con2();
+   println!("{} {}",ans,ans2);
+   own::ownership();
+   learnStruct::learnStruct();
+   learnEnum::learnEnum();
+   vector::learnVector();
+   learnString::learnString();
+   error::all_error();
 }
