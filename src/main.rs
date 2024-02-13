@@ -23,6 +23,8 @@ fn main() {
         println!("aaaaaaaaaaaaa:{a}");
     }
     println!("{a}");
+    // panic!("something wrong happend"); //when we use panic that means after panic code will not execute
+    // std::process::abort(); //when panic occurred then we can abort program and when we use abort then no unwinding occurred
     let str: &str="a ";
     let l: usize=str.len();
     println!("{}",str.len());
