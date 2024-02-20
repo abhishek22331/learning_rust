@@ -1,6 +1,7 @@
 use crate::test::vector;
 use crate::test::learnString;
 use crate::test::error;
+use crate::test::genericValue;
 // use test::vector; // it will also work
 
 mod fun;
@@ -12,6 +13,7 @@ mod test {
     pub mod vector;
     pub mod learnString;
     pub mod error;
+    pub mod genericValue ; //calling;
 }
 fn main() {
     let mut a: i32=5;
@@ -65,4 +67,5 @@ fn main() {
    vector::learnVector();
    learnString::learnString();
    error::all_error();
+   genericValue::calling();
 }
